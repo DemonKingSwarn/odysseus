@@ -1,0 +1,573 @@
+{ config, pkgs, inputs, ... }:
+
+{
+  imports = [ inputs.niri.homeModules.niri ];
+
+  programs.niri = {
+    enable = true;
+    config = ''
+      environment {
+        DISPLAY ":0"
+
+        SDL_VIDEODRIVER "wayland"
+        SDL_AUDIODRIVER "pipewire"
+        _JAVA_AWT_WM_NONREPARENTING "1"
+
+        XDG_CURRENT_DESKTOP "niri"
+        XDG_SESSION_DESKTOP "niri"
+        XDG_CURRENT_SESSION_TYPE "wayland"
+
+        GDK_BACKEND "wayland"
+        MOZ_ENABLE_WAYLAND "1"
+        MOZ_DISABLE_RDD_SANDBOX "1"
+        KITTY_ENABLE_WAYLAND "1"
+        EGL_PLATFORM "wayland"
+        GTK_USE_PORTAL "0"
+
+        QT_PLUGIN_PATH "/usr/lib/qt/plugins/"
+        QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+        QT_QPA_PLATFORM "wayland"
+        QT_QPA_PLATFORMTHEME "gtk3"
+
+        HYPRCURSOR_THEME "Bibata-Modern-Ice"
+        HYPRCURSOR_SIZE "24"
+
+        __GLX_VENDOR_LIBRARY_NAME "nvidia"
+        __GL_VRR_ALLOWED "1"
+        WLR_NO_HARDWARE_CURSORS "1"
+        LIBVA_DRIVER_NAME "nvidia"
+        VDPAU_DRIVER "nvidia"
+        __GL_SYNC_TO_VBLANK "0"
+        NVD_BACKEND "direct"
+      }
+
+      binds {
+          Super+Shift+Slash { show-hotkey-overlay; }
+
+          Super+Return { spawn "wezterm"; }
+          Alt+Return { spawn "ghostty"; }
+          //Super+D { spawn "rofi" "-show" "drun"; }
+          Super+D { spawn "vicinae" "toggle"; }
+          Super+E { spawn "vicinae" "vicinae://launch/core/search-emojis"; }
+          Super+Shift+X { spawn "~/.scripts/system/waylock.sh"; }
+          Print { screenshot-screen; }
+          Super+Print { screenshot; }
+          Alt+Print { screenshot-window; }
+
+          // my new keyboard doesnt have print screen
+          Super+P { screenshot-screen; }
+          Super+Shift+P { screenshot; }
+
+          Super+N { spawn "nightmode"; }
+          Super+O { spawn "~/.scripts/0x0/share"; }
+          Super+W { spawn "~/.scripts/misc/wallmanager"; }
+          Super+G { spawn "nirifreeze"; }
+          Super+V { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
+          Alt+C { spawn "colpick"; }
+          Super+TAB repeat=false { toggle-overview; }
+
+          XF86AudioRaiseVolume  { spawn "pamixer" "-i" "5"; }
+          XF86AudioLowerVolume  { spawn "pamixer" "-d" "5"; }
+          XF86AudioMute { spawn "pamixer" "-t" "mute"; }
+
+          XF86MonBrightnessUp   { spawn "brightnessctl" "set" "+5%"; }
+          XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
+          Super+F1   { spawn "brightnessctl" "set" "+5%"; }
+          Super+F2 { spawn "brightnessctl" "set" "5%-"; }
+
+          XF86AudioPlay  { spawn "playerctl" "play-pause";}
+          XF86AudioPrev  { spawn "playerctl" "previous";}
+          XF86AudioNext  { spawn "playerctl" "next";}
+
+          XF86Explorer { spawn "thunar"; }
+          XF86Search { spawn "rofi" "-no-lazy-greb" "-show" "file-browser-extended" "-icon-theme" "'Cosmic'"; }
+          XF86Calculator { spawn "galculator"; }
+          XF86Tools { spawn "waterfox" "--new-window" "-kiosk" "https://music.youtube.com";}
+
+          Super+I { spawn "wezterm" "-e" "htop"; }
+
+          Super+Shift+Q { close-window; }
+
+          Super+Left  { focus-column-left; }
+          Super+Down  { focus-window-down; }
+          Super+Up    { focus-window-up; }
+          Super+Right { focus-column-right; }
+
+          Super+H     { focus-column-left; }
+          Super+J     { focus-window-down; }
+          Super+K     { focus-window-up; }
+          Super+L     { focus-column-right; }
+
+          Super+Shift+Left  { move-column-left; }
+          Super+Shift+Down  { move-window-down; }
+          Super+Shift+Up    { move-window-up; }
+          Super+Shift+Right { move-column-right; }
+          Super+Shift+H     { move-column-left; }
+          Super+Shift+J     { move-window-down; }
+          Super+Shift+K     { move-window-up; }
+          Super+Shift+L     { move-column-right; }
+
+          Super+Home { focus-column-first; }
+          Super+End  { focus-column-last; }
+          Super+Shift+Home { move-column-to-first; }
+          Super+Shift+End  { move-column-to-last; }
+
+          Super+Page_Down      { focus-workspace-down; }
+          Super+Page_Up        { focus-workspace-up; }
+          Super+U              { focus-workspace-down; }
+          Super+Shift+Page_Down { move-column-to-workspace-down; }
+          Super+Shift+Page_Up   { move-column-to-workspace-up; }
+          Super+Shift+U         { move-column-to-workspace-down; }
+          Super+Shift+I         { move-column-to-workspace-up; }
+
+          Super+1 { focus-workspace 1; }
+          Super+2 { focus-workspace 2; }
+          Super+3 { focus-workspace 3; }
+          Super+4 { focus-workspace 4; }
+          Super+5 { focus-workspace 5; }
+          Super+6 { focus-workspace 6; }
+          Super+7 { focus-workspace 7; }
+          Super+8 { focus-workspace 8; }
+          Super+9 { focus-workspace 9; }
+
+          Super+Shift+1 { move-window-to-workspace 1; }
+          Super+Shift+2 { move-window-to-workspace 2; }
+          Super+Shift+3 { move-window-to-workspace 3; }
+          Super+Shift+4 { move-window-to-workspace 4; }
+          Super+Shift+5 { move-window-to-workspace 5; }
+          Super+Shift+6 { move-window-to-workspace 6; }
+          Super+Shift+7 { move-window-to-workspace 7; }
+          Super+Shift+8 { move-window-to-workspace 8; }
+          Super+Shift+9 { move-window-to-workspace 9; }
+
+          Super+Comma  { consume-window-into-column; }
+          Super+Period { expel-window-from-column; }
+
+          Super+R { switch-preset-column-width; }
+          Super+Shift+F { maximize-column; }
+          Super+F { fullscreen-window; }
+          Super+C { center-column; }
+
+          Super+Minus { set-column-width "-10%"; }
+          Super+Equal { set-column-width "+10%"; }
+
+          // Finer height adjustments when in column with other windows.
+          Super+Shift+Minus { set-window-height "-10%"; }
+          Super+Shift+Equal { set-window-height "+10%"; }
+
+          Super+Shift+M { quit; }
+
+          Super+Ctrl+Shift+T { toggle-debug-tint; }
+      }
+
+      input {
+
+          keyboard {
+              repeat-delay 300
+              repeat-rate 69
+              xkb {
+                layout "us"
+                options "compose:menu"
+              }
+          }
+
+          touchpad {
+              click-method "button-areas"
+              tap
+              natural-scroll
+              scroll-method "two-finger"
+              middle-emulation
+              scroll-factor 1
+              accel-speed 0.2
+              accel-profile "adaptive"
+          }
+
+          mouse {
+            accel-speed 0.3
+            accel-profile "flat"
+            //scroll-factor 1.0
+            scroll-method "no-scroll"
+            //scroll-button 274
+            //middle-emulation
+          }
+
+        focus-follows-mouse
+        warp-mouse-to-focus
+        workspace-auto-back-and-forth
+      }
+
+      output "eDP-1" {
+          scale 1
+
+          mode "1920x1080@60"
+          position x=1920 y=0
+      }
+
+
+      output "HDMI-A-2" {
+        scale 1
+
+        mode "1920x1080@74.973"
+        position x=0 y=0
+      }
+
+      animations {
+          workspace-switch {
+              // off
+              spring damping-ratio=0.75 stiffness=600 epsilon=0.001
+          }
+          horizontal-view-movement {
+              // off
+              spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+          }
+
+          window-open {
+            //duration-ms 150
+            //curve "ease-out-expo"
+            //custom-shader "~/.config/niri/shaders/smooth.glsl"
+            /-custom-shader r"
+                  vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+                      vec3 coords_tex = niri_geo_to_tex * coords_geo;
+                      vec4 color = texture2D(niri_tex, coords_tex.st);
+
+                      vec2 size = size_geo.xy;
+                      vec2 coords = (coords_geo.xy - vec2(0.5, 0.5)) * size * 2.0;
+
+                      // Some padding for borders and shadows.
+                      float pad = 8.0;
+                      coords = coords + vec2(pad, pad);
+                      size = size + vec2(pad, pad) * 2.0;
+
+                      coords = coords / length(size);
+                      float p = niri_clamped_progress;
+                      if (p * p <= dot(coords, coords))
+                          color = vec4(0.0);
+
+                      return color;
+                  }
+              "
+
+            /-custom-shader r"
+                  vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+                      vec3 coords_tex = niri_geo_to_tex * coords_geo;
+                      vec4 color = texture2D(niri_tex, coords_tex.st);
+
+                      return color;
+                  }
+              "
+            duration-ms 200
+            curve "linear"
+          }
+
+          window-close {
+            //duration-ms 150
+            //curve "ease-out-quad"
+            //duration-ms 200
+            //curve "ease-out-quad"
+
+            custom-shader r"
+                  mat2 rotate(float angle) {
+                      return mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
+                  }
+
+                  vec4 close_color(vec3 coords_geo, vec3 size_geo) {
+                      float progress = niri_clamped_progress * niri_clamped_progress;
+
+                      vec2 coords = (coords_geo.xy - vec2(0.5, 1.0)) * size_geo.xy;
+
+                      coords.y -= progress * 200.0;
+
+                      float random = (niri_random_seed - 0.5) / 2.0;
+                      random = sign(random) - random;
+                      float max_angle = 0.05 * random;
+
+                      float angle = progress * max_angle;
+                      coords = rotate(angle) * coords;
+
+                      coords_geo = vec3(coords / size_geo.xy + vec2(0.5, 1.0), 1.0);
+
+                      vec3 coords_tex = niri_geo_to_tex * coords_geo;
+                      vec4 color = texture2D(niri_tex, coords_tex.st);
+
+                      return color * (1.0 - niri_clamped_progress);
+                  }
+              "
+
+            /-custom-shader r"
+                  vec4 close_color(vec3 coords_geo, vec3 size_geo) {
+                      vec3 coords_tex = niri_geo_to_tex * coords_geo;
+                      vec4 color = texture2D(niri_tex, coords_tex.st);
+
+                      return color;
+                  }
+              "
+          }
+
+          overview-open-close {
+            spring damping-ratio=0.75 stiffness=650 epsilon=0.001
+          }
+
+        window-resize {
+          /-custom-shader r"
+                  vec4 resize_color(vec3 coords_curr_geo, vec3 size_curr_geo) {
+                      vec3 coords_next_geo = niri_curr_geo_to_next_geo * coords_curr_geo;
+                      vec3 coords_prev_geo = niri_curr_geo_to_prev_geo * coords_curr_geo;
+
+                      vec3 coords_crop = niri_geo_to_tex_next * coords_next_geo;
+                      vec3 coords_stretch = niri_geo_to_tex_next * coords_curr_geo;
+                      vec3 coords_stretch_prev = niri_geo_to_tex_prev * coords_curr_geo;
+
+                      // We can crop if the current window size is smaller than the next window
+                      // size. One way to tell is by comparing to 1.0 the X and Y scaling
+                      // coefficients in the current-to-next transformation matrix.
+                      bool can_crop_by_x = niri_curr_geo_to_next_geo[0][0] <= 1.0;
+                      bool can_crop_by_y = niri_curr_geo_to_next_geo[1][1] <= 1.0;
+                      bool crop = can_crop_by_x && can_crop_by_y;
+
+                      vec4 color;
+
+                      if (crop) {
+                          // However, when we crop, we also want to crop out anything outside the
+                          // current geometry. This is because the area of the shader is unspecified
+                          // and usually bigger than the current geometry, so if we don't fill pixels
+                          // outside with transparency, the texture will leak out.
+                          if (coords_curr_geo.x < 0.0 || 1.0 < coords_curr_geo.x ||
+                                  coords_curr_geo.y < 0.0 || 1.0 < coords_curr_geo.y) {
+                              color = vec4(0.0);
+                          } else {
+                              color = texture2D(niri_tex_next, coords_crop.st);
+                          }
+                      } else {
+                          // If we can't crop, then crossfade.
+                          color = texture2D(niri_tex_next, coords_stretch.st);
+                          vec4 color_prev = texture2D(niri_tex_prev, coords_stretch_prev.st);
+                          color = mix(color_prev, color, niri_clamped_progress);
+                      }
+
+                      return color;
+                  }
+              "
+        }
+
+        screenshot-ui-open {
+          // off
+          duration-ms 200
+          curve "ease-out-quad"
+        }
+      }
+
+      window-rule {
+        match app-id="waterfox" title=r#"^File Upload$"#
+        open-floating true
+      }
+
+      // Godot rules
+      window-rule {
+          match app-id="Godot" title="Create New Node"
+          match app-id="Godot" title="Godot Engine - Project Manager"
+          open-floating true
+          default-window-height { fixed 750; }
+      }
+
+      // terminals
+      window-rule {
+        match app-id=r#"^org\.wezfurlong\.wezterm$"#
+        match app-id=r#"^com\.mitchellh\.ghostty$"#
+        match app-id=r#"^foot|footclient$"#
+
+        background-effect {
+          blur { on; }
+        }
+      }
+
+      // browser and shit
+      window-rule {
+        match app-id=r#"^helium$"#
+        match app-id=r#"^thunar$"#
+        opacity 0.95
+        background-effect {
+          blur { on; }
+        }
+      }
+
+      window-rule {
+        match app-id="SuperPacker"
+        open-floating true
+      }
+
+      window-rule {
+          match app-id="" title="Picture-in-Picture"
+          open-floating true
+          //default-column-width { fixed 480; }
+          //default-window-height { fixed 270; }
+          default-floating-position x=50 y=50 relative-to="top-right"
+      }
+
+      window-rule {
+          geometry-corner-radius 20
+          clip-to-geometry true
+      }
+
+      window-rule {
+          match app-id="vesktop"
+          block-out-from "screen-capture"
+      }
+
+      window-rule {
+          match app-id="waterfox" title=r#"^Whatsapp"#
+          block-out-from "screen-capture"
+      }
+
+      window-rule {
+          match is-window-cast-target=true
+
+          focus-ring {
+              active-color "#f38ba8"
+              inactive-color "#7d0d2d"
+          }
+
+          border {
+              inactive-color "#7d0d2d"
+          }
+
+          shadow {
+              color "#7d0d2d70"
+          }
+
+          tab-indicator {
+              active-color "#f38ba8"
+              inactive-color "#7d0d2d"
+          }
+      }
+
+      layer-rule {
+        match namespace="^wallpaper$"
+        place-within-backdrop true
+      }
+
+      layer-rule {
+        match namespace="waybar"
+        opacity 0.99
+      }
+
+      layer-rule {
+          match namespace="swaync-notification-window"
+          block-out-from "screen-capture"
+      }
+
+
+      layer-rule {
+          match namespace="awww"
+          geometry-corner-radius 12
+          place-within-backdrop true
+      }
+
+      layer-rule {
+        match namespace="rofi"
+
+        background-effect {
+          blur { on; }
+        }
+      }
+
+      layout {
+          preset-column-widths {
+              proportion 0.25
+              proportion 0.33333
+              proportion 0.5
+              proportion 0.66667
+              proportion 0.75
+              fixed 1280
+          }
+
+          preset-window-heights {
+              proportion 0.5
+              proportion 0.66667
+              proportion 1.0
+          }
+
+          default-column-width { proportion 1.0; }
+
+          focus-ring {
+               off
+          }
+          border {
+              width 2
+              active-color "#C1CAF5"
+              inactive-color "transparent"
+              urgent-color "#9b0000"
+          }
+
+          shadow {
+              on
+              softness 30
+              spread 8
+              offset x=0 y=5
+              color "#00000040"
+          }
+
+          tab-indicator {
+            width 8
+            gap 8
+            length total-proportion=1.0
+            position "top"
+            place-within-column
+          }
+
+          background-color "transparent"
+          gaps 6
+      }
+
+      screenshot-path "~/pix/ss/shot_%y%m%d_%H-%M-%S.png"
+
+      prefer-no-csd
+
+      hotkey-overlay {
+          skip-at-startup
+      }
+
+      cursor {
+        xcursor-theme "Bibata-Modern-Ice"
+
+        xcursor-size 24
+
+        hide-when-typing
+        // hide-after-inactive-ms 1000
+      }
+
+      overview {
+          zoom 0.333
+          backdrop-color "#262626"
+
+          workspace-shadow {
+              off
+              softness 100
+              spread 50
+              offset x=20 y=20
+              color "#000a"
+          }
+      }
+
+      recent-windows {
+        highlight {
+          corner-radius 14
+        }
+
+        previews {
+          max-height 320
+        }
+      }
+
+      gestures {
+        hot-corners {
+          off
+        }
+      }
+
+      switch-events {
+        lid-close { spawn "systemctl" "suspend-then-hibernate"; }
+        lid-open { spawn "notify-send" "System resume complete"; }
+      }
+    '';
+  };
+}
