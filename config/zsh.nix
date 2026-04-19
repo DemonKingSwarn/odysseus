@@ -20,6 +20,8 @@
       
       ".." = "cd ..";
       
+      system-manager = ''nix run 'github:numtide/system-manager' --'';
+
       zrc = "nvim $HOME/.config/zsh/.zshrc";
       
       ga = "git add";

@@ -3,6 +3,7 @@
 {
   imports = [
     ./config/zsh.nix
+    ./config/ghostty.nix
   ];
 
   home.username = "swarn";
