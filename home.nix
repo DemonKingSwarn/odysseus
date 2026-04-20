@@ -4,6 +4,7 @@
   imports = [
     ./config/git.nix
     ./config/zsh.nix
+    ./config/starship.nix
     ./config/ghostty.nix
   ];
 
@@ -21,7 +22,6 @@
       "${config.home.homeDirectory}/.local/bin"
       "${config.home.homeDirectory}/.local/bin/statusbar"
       "${config.home.homeDirectory}/.local/share/cargo/bin"
-      "${config.home.homeDirectory}/.nix-profile/bin"
       "${config.home.homeDirectory}/Applications"
       "${config.home.homeDirectory}/dox/jai/bin"
     ];
