@@ -51,6 +51,8 @@
       starship
       tmux
       ripgrep
+      aria2
+      figlet
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
       inputs.luffy.packages.${system}.luffy
     ];
