@@ -2,10 +2,11 @@
 
 {
   imports = [
-    ./config/git.nix
-    ./config/zsh.nix
-    ./config/starship.nix
-    ./config/ghostty.nix
+    ./home/git.nix
+    ./home/zsh.nix
+    ./home/tmux.nix
+    ./home/starship.nix
+    ./home/ghostty.nix
   ];
 
   home.username = "swarn";
