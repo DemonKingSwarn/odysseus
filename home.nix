@@ -49,9 +49,11 @@
       git
       duf
       zoxide
+      rm-improved
       starship
       tmux
       ripgrep
+      yazi
       aria2
       figlet
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
