@@ -46,6 +46,7 @@
       eza
       fzf
       git
+      duf
       zoxide
       starship
       tmux
