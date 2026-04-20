@@ -10,7 +10,10 @@
 
     hypr-wellbeing = {
       url = "github:demonkingswarn/hypr-wellbeing";
-      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    luffy = {
+      url = "github:DemonKingSwarn/luffy";
     };
   };
 
@@ -18,7 +21,6 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-
     in
     {
       homeConfigurations."swarn" = home-manager.lib.homeManagerConfiguration {

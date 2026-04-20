@@ -67,10 +67,10 @@
       lf = "yazi";
       dfm = "demonfm";
       
-      ls = "eza --icons --group-directories-first";
-      ll = "eza -lgh --icons --group-directories-first";
-      la = "eza -lagh --icons --group-directories-first";
-      tree = "eza -T --icons";
+      ls = "eza";
+      ll = "eza -lgh";
+      la = "eza -lagh";
+      tree = "eza -T";
       
       mv = "mvg -ig";
       rm = "rip -i --graveyard $HOME/.local/share/Trash";
