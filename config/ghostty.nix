@@ -7,36 +7,36 @@
     settings = {
       theme = "Catppuccin Mocha";
       #background = "#282a36";
-      "background-opacity" = 0.9;
+      background-opacity = 0.9;
 
       #custom-shader = "/home/swarn/.config/ghostty/bettercrt.glsl";
 
-      "window-vsync" = true;
+      window-vsync = true;
 
       title = "Ghostty";
       class = "ghostty";
 
-      "shell-integration" = "zsh";
+      shell-integration = "zsh";
 
-      "quick-terminal-position" = "top";
-      "quick-terminal-autohide" = false;
+      quick-terminal-position = "top";
+      quick-terminal-autohide = false;
 
-      "font-family" = "LythMono Nerd Font";
-      "font-size" = 16;
+      font-family = "LythMono Nerd Font";
+      font-size = 16;
 
-      "cursor-style" = "block";
-      "cursor-style-blink" = false;
-      "shell-integration-features" = "no-cursor";
+      cursor-style = "block";
+      cursor-style-blink = false;
+      shell-integration-features = "no-cursor";
 
       #gtk-titlebar = false;
-      "window-decoration" = "server";
-      "confirm-close-surface" = false;
+      window-decoration = "server";
+      confirm-close-surface = false;
 
-      "window-theme" = "ghostty";
+      window-theme = "ghostty";
 
-      "window-padding-x" = 8;
-      "window-padding-y" = 2;
-      "window-padding-balance" = true;
+      window-padding-x = 8;
+      window-padding-y = 2;
+      window-padding-balance = true;
 
       keybind = [
         "alt+shift+r=reload_config"
