@@ -5,7 +5,7 @@
     enable = true;
 
     config = {
-      theme = lib.mkForce "catppuccin-mocha";
+      theme = lib.mkForce "Catppuccin Mocha";
     };
   };
 }
