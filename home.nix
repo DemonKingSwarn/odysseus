@@ -36,6 +36,15 @@
     };
   };
 
-  programs.home-manager.enable = true;
+  programs = { 
+    home-manager.enable = true; 
+    git.enable = true;
+    bat.enable = true;
+    tmux.enable = true;
+    starship.enable = true;
+  };
+  
   systemd.user.startServices = "sd-switch";
+
+  
 }

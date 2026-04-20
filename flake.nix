@@ -19,12 +19,6 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
 
-      environment.systemPackages = [
-        pkgs.zsh 
-        pkgs.git
-        pkgs.starship
-        pkgs.tmux
-      ];
     in
     {
       homeConfigurations."swarn" = home-manager.lib.homeManagerConfiguration {
