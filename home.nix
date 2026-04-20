@@ -8,9 +8,12 @@
     ./home/eza.nix
     ./home/fzf.nix
     ./home/zsh.nix
+    ./home/gpg.nix
     ./home/tmux.nix
     ./home/starship.nix
     ./home/ghostty.nix
+    ./home/mime-apps.nix
+    ./home/xdg-user-dirs.nix
   ];
 
   home = {
