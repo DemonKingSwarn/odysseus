@@ -48,14 +48,15 @@
       starship
       tmux
       udisks2
+      ripgrep
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
       inputs.luffy.packages.${system}.luffy
     ];
   };
 
-  programs = { 
-    home-manager.enable = true; 
+  programs = {
+    home-manager.enable = true;
   };
-  
+
   systemd.user.startServices = "sd-switch";
 }
