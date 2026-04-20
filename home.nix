@@ -15,6 +15,7 @@
     ./home/ghostty.nix
     ./home/mime-apps.nix
     ./home/xdg-user-dirs.nix
+    ./home/editorconfig.nix
   ];
 
   home = {
