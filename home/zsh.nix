@@ -70,7 +70,7 @@
       ls = "eza --icons --group-directories-first";
       ll = "eza -lgh --icons --group-directories-first";
       la = "eza -lagh --icons --group-directories-first";
-      tree = "eza -aT --icons";
+      tree = "eza -T --icons";
       
       mv = "mvg -ig";
       rm = "rip -i --graveyard $HOME/.local/share/Trash";
