@@ -40,10 +40,13 @@
     };
 
     packages = with pkgs; [
+      zsh
+      zinit
       bat
       eza
       fzf
       git
+      zoxide
       starship
       tmux
       ripgrep
