@@ -85,7 +85,7 @@
       tree = "eza -T";
 
       mv = "mvg -ig";
-      rm = "rip -i --graveyard $HOME/.local/share/Trash";
+      #rm = "rip -i --graveyard $HOME/.local/share/Trash";
       ln = "ln -i";
       cp = "cpg -ig";
 
@@ -145,7 +145,7 @@
       eval "$(starship init zsh)"
       eval "$(atuin init zsh)"
 
-      # functions
+      # functmons
       function help() {
         "$@" --help 2>&1 | bat --plain --language=help
       }
