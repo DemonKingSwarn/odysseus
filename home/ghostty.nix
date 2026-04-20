@@ -5,6 +5,8 @@
     enable = true;
 
     settings = {
+      command = "/home/swarn/.nix-profile/bin/zsh"; 
+
       theme = "Catppuccin Mocha";
       #background = "#282a36";
       background-opacity = 0.9;

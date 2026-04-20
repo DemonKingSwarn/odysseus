@@ -20,7 +20,9 @@
       pkgs = nixpkgs.legacyPackages.${system};
 
       environment.systemPackages = [
+        pkgs.zsh 
         pkgs.git
+        pkgs.starship
         pkgs.tmux
       ];
     in
