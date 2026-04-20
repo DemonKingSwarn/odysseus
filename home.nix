@@ -10,7 +10,6 @@
     ./home/zsh.nix
     ./home/gpg.nix
     ./home/tmux.nix
-    ./home/udiskie.nix
     ./home/starship.nix
     ./home/ghostty.nix
     ./home/mime-apps.nix
@@ -47,7 +46,6 @@
       git
       starship
       tmux
-      udisks2
       ripgrep
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
       inputs.luffy.packages.${system}.luffy

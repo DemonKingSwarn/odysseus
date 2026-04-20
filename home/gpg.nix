@@ -17,7 +17,7 @@
   };
 
   services.gpg-agent = {
-    enable = true;
+    enable = false;
     defaultCacheTtl = 43200;
     maxCacheTtl = 43200;
 

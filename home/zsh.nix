@@ -14,16 +14,14 @@
       share = true;
       expireDuplicatesFirst = true;
     };
-    
+
     shellAliases = {
       sch = "sudo systemctl set-environment SCX_SCHEDULER_OVERRIDE=scx_lavd && sudo systemctl restart scx";
-      
+
       ".." = "cd ..";
-      
-      system-manager = ''nix run 'github:numtide/system-manager' --'';
 
       zrc = "nvim $HOME/.config/zsh/.zshrc";
-      
+
       ga = "git add";
       gc = "git commit";
       gp = "git push";
@@ -33,7 +31,7 @@
       gb = "git branch";
       gi = "git init";
       gcl = "git clone";
-      
+
       swww = "awww";
       weather = "curl -s 'https://wttr.in/?1n'";
       pacgraph = "pacgraph --show-req-by -b '#232738' -l '#9778d3' -t '#cca9c6' -d '#b8d0eb'";
@@ -66,37 +64,37 @@
       rtmp = "podman run -d -p 1935:1935 --name nginx docker.io/tiangolo/nginx-rtmp";
       lf = "yazi";
       dfm = "demonfm";
-      
+
       ls = "eza";
       ll = "eza -lgh";
       la = "eza -lagh";
       tree = "eza -T";
-      
+
       mv = "mvg -ig";
       rm = "rip -i --graveyard $HOME/.local/share/Trash";
       ln = "ln -i";
       cp = "cpg -ig";
-      
+
       "scheiße" = "bash";
       e = "$EDITOR";
       edit = "msedit";
       c = "clear";
-     
+
       xcc = "xclip -selection clipboard";
       xco = "xclip -selection clipboard -o";
       pbcopy = "wl-copy";
       pbpaste = "wl-paste";
-      
+
       install = "paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S";
       uninstall = "paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rcns";
       update = "paru -Syu --noconfirm";
       garbage = "paru -Rcns $(paru -Qqdtt)";
     };
-    
+
     initContent = ''
-      unset __HM_SESS_VARS_SOURCED 
+      unset __HM_SESS_VARS_SOURCED
       source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-     
+
       # global aliases
       alias -g NE='2>/dev/null'
       alias -g DN='> /dev/null'
