@@ -12,10 +12,18 @@
     ./home/tmux.nix
     ./home/starship.nix
     ./home/ghostty.nix
+    ./home/wezterm.nix
     ./home/mime-apps.nix
     ./home/xdg-user-dirs.nix
     ./home/editorconfig.nix
   ];
+
+  targets.genericLinux.enable = true;
+
+  xdg = {
+    enable = true;
+    mime.enable = true;
+  };
 
   home = {
     username = "swarn";
@@ -56,6 +64,8 @@
       yazi
       aria2
       figlet
+      ghostty
+      wezterm
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
       inputs.luffy.packages.${system}.luffy
     ];

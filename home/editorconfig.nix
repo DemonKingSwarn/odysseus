@@ -16,7 +16,7 @@
         indent_size = 4;
       };
 
-      "*.rs" = {
+      "*.jai" = {
         indent_size = 4;
       };
     };
