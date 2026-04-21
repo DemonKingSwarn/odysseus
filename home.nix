@@ -49,23 +49,14 @@
     };
 
     packages = with pkgs; [
-      zsh
       zinit
-      bat
-      eza
-      fzf
-      git
       duf
       zoxide
       rm-improved
-      starship
-      tmux
       ripgrep
       yazi
       aria2
       figlet
-      ghostty
-      wezterm
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
       inputs.luffy.packages.${system}.luffy
     ];
