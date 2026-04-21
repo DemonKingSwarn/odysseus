@@ -33,4 +33,5 @@ Make sure you have `home-manager` installed on your system.
 git clone https://github.com/demonkingswarn/odysseus
 cd odysseus
 home-manager switch --flake .
+nix profile install github:nix-community/nixGl
 ```
