@@ -106,8 +106,8 @@
     };
 
     initContent = ''
-      unset __HM_SESS_VARS_SOURCED
-      source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+      #unset __HM_SESS_VARS_SOURCED
+      #source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
 
       # global aliases
       alias -g NE='2>/dev/null'
