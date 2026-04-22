@@ -33,5 +33,10 @@ Make sure you have `home-manager` installed on your system.
 git clone https://github.com/demonkingswarn/odysseus
 cd odysseus
 home-manager switch --flake .
+```
+
+If you are using this on a different distro than NixOS like me, then make sure to run this after `home-manager`:
+
+```sh
 nix profile install github:nix-community/nixGl
 ```
