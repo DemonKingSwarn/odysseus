@@ -57,6 +57,7 @@
       yazi
       aria2
       figlet
+      lazygit
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
       inputs.luffy.packages.${system}.luffy
     ];
