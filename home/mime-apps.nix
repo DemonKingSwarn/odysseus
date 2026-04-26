@@ -33,6 +33,7 @@
 
       # Text
       "text/*" = "nvim.desktop";
+      "text/jai" = "nvim.desktop";
       "text/html" = "helium.desktop";
       "text/php" = "helium.desktop";
       "text/plain" = "nvim.desktop";
@@ -73,6 +74,7 @@
       "video/x-ogm+ogg" = "mpv.desktop";
       "video/x-sgi-movie" = "mpv.desktop";
       "video/x-theora+ogg" = "mpv.desktop";
+      "video/jai" = "nvim.desktop";
 
       # Scheme handlers
       "x-scheme-handler/about" = "helium.desktop";
