@@ -78,6 +78,7 @@
       rtmp = "podman run -d -p 1935:1935 --name nginx docker.io/tiangolo/nginx-rtmp";
       lf = "yazi";
       dfm = "demonfm";
+      lg = "lazygit";
 
       ls = "eza";
       ll = "eza -lgh";
