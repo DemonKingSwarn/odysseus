@@ -7,9 +7,7 @@
     settings = {
       theme = "Catppuccin Mocha";
       #background = "#282a36";
-      background-opacity = 0.9;
-
-      #custom-shader = "/home/swarn/.config/ghostty/bettercrt.glsl";
+      background-opacity = 0.90;
 
       window-vsync = true;
 
@@ -26,6 +24,8 @@
 
       cursor-style = "block";
       cursor-style-blink = false;
+      cursor-opacity = 0.90;
+      mouse-hide-while-typing = true;
       shell-integration-features = "no-cursor";
 
       #gtk-titlebar = false;
@@ -34,8 +34,8 @@
 
       window-theme = "ghostty";
 
-      window-padding-x = 8;
-      window-padding-y = 2;
+      window-padding-x = 10;
+      window-padding-y = 10;
       window-padding-balance = true;
 
       keybind = [
