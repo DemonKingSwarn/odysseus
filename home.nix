@@ -60,7 +60,7 @@
       figlet
       lazygit
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
-      inputs.luffy.packages.${system}.luffy
+      #inputs.luffy.packages.${system}.luffy
     ];
   };
 

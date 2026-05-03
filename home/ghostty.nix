@@ -41,6 +41,7 @@
       keybind = [
         "alt+shift+r=reload_config"
         "ctrl+a=toggle_quick_terminal"
+        "ctrl+s=new_tab"
       ];
     };
   };
