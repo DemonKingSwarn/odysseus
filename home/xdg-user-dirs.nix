@@ -15,9 +15,9 @@ in
       desktop = homeDirectory;
       download = "${homeDirectory}/dl";
       documents = "${homeDirectory}/dox";
-      music = "${homeDirectory}/musics";
-      pictures = "${homeDirectory}/pix";
-      videos = "${homeDirectory}/vids";
+      music = "${homeDirectory}/media/musics";
+      pictures = "${homeDirectory}/media/pix";
+      videos = "${homeDirectory}/media/vids";
       projects = "${homeDirectory}/dox/code";
     };
 

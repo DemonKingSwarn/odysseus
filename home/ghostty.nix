@@ -42,6 +42,7 @@
         "alt+shift+r=reload_config"
         "ctrl+a=toggle_quick_terminal"
         "ctrl+shift+s=new_tab"
+        "ctrl+5=split_right"
       ];
     };
   };

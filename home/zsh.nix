@@ -79,6 +79,7 @@
       lf = "yazi";
       dfm = "demonfm";
       lg = "lazygit";
+      down = "aria2c -x 16 -s 16";
 
       ls = "eza";
       ll = "eza -lgh";
