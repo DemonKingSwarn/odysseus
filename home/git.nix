@@ -4,11 +4,11 @@
 
   programs.git = {
     enable = true;
-    
+
     settings = {
-      user = { 
+      user = {
         name = "DemonKingSwarn";
-        email = "rockingswarn@gmail.com";
+        email = "swarnaditya.7@proton.me";
       };
 
       init = {

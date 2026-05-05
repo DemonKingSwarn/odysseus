@@ -4,6 +4,7 @@
   imports = [
     ./home/nix.nix
     ./home/git.nix
+    ./home/jj.nix
     ./home/bat.nix
     ./home/eza.nix
     ./home/fzf.nix
@@ -59,6 +60,7 @@
       aria2
       figlet
       lazygit
+      lazyjj
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
       #inputs.luffy.packages.${system}.luffy
     ];
