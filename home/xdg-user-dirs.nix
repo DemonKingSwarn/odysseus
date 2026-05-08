@@ -18,7 +18,7 @@ in
       music = "${homeDirectory}/media/musics";
       pictures = "${homeDirectory}/media/pix";
       videos = "${homeDirectory}/media/vids";
-      projects = "${homeDirectory}/dox/code";
+      projects = "${homeDirectory}/projects";
     };
 
     configFile."user-dirs.locale".text = "en_IN";
