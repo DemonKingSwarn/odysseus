@@ -131,6 +131,8 @@
       bindkey ' ' magic-space
       bindkey -s '^o' 'lfcd\n'
 
+      bindkey '^v' tmux-sessions
+
       # completion styling
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
       zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}"
@@ -198,6 +200,10 @@
       }
       function pdfmaker() {
         pandoc --pdf-engine=pdfroff "$1" -o "$2.pdf"
+      }
+
+      function tmux-sessions() {
+        ~/.dots/.local/bin/tmux-sessions
       }
 
       # greeting
