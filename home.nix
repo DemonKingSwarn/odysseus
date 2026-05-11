@@ -46,6 +46,7 @@
       EDITOR = "nvim";
       BROWSER = "helium-browser";
       TERMINAL = "ghostty";
+      TERM = "ghostty";
 
       ZDOTDIR = "${config.home.homeDirectory}/.config/zsh";
     };
@@ -61,7 +62,6 @@
       figlet
       lazygit
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
-      #inputs.luffy.packages.${system}.luffy
     ];
   };
 

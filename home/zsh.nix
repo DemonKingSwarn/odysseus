@@ -111,6 +111,8 @@
       #unset __HM_SESS_VARS_SOURCED
       #source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
 
+      export GOPATH="$XDG_DATA_HOME"/go
+
       # global aliases
       alias -g NE='2>/dev/null'
       alias -g DN='> /dev/null'

@@ -17,9 +17,13 @@
       url = "github:demonkingswarn/hypr-wellbeing";
     };
 
-    luffy = {
-      url = "github:DemonKingSwarn/luffy";
-    };
+    #luffy = {
+    #  url = "github:DemonKingSwarn/luffy";
+    #};
+
+    #concord = {
+    #  url = "github:chojs23/concord";
+    #};
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:

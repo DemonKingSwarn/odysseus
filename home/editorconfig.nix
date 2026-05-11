@@ -12,11 +12,11 @@
         trim_trailing_whitespace = true;
       };
 
-      "*.md" = {
+      "*.jai" = {
         indent_size = 4;
       };
 
-      "*.jai" = {
+      "*.odin" = {
         indent_size = 4;
       };
     };
