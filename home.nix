@@ -34,7 +34,6 @@
 
     sessionPath = [
       "${config.home.homeDirectory}/.local/bin"
-      "${config.home.homeDirectory}/.radicle/bin"
       "${config.home.homeDirectory}/.local/bin/statusbar"
       "${config.home.homeDirectory}/.local/share/cargo/bin"
       "${config.home.homeDirectory}/.local/share/go/bin"
