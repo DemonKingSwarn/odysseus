@@ -2,7 +2,7 @@
 
 {
   programs.gpg = {
-    enable = false;
+    enable = true;
 
     settings = {
       personal-digest-preferences = "SHA512";

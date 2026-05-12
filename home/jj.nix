@@ -1,7 +1,7 @@
 { ... }:
 {
   programs.jujutsu = {
-    enable = true;
+    enable = false;
 
     settings = {
       user = {

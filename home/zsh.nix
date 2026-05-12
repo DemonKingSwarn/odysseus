@@ -112,6 +112,7 @@
       #source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
 
       export GOPATH="$XDG_DATA_HOME"/go
+      export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
       # global aliases
       alias -g NE='2>/dev/null'
