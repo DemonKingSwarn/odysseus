@@ -4,7 +4,6 @@
   imports = [
     ./home/nix.nix
     ./home/git.nix
-    ./home/jj.nix
     ./home/bat.nix
     ./home/eza.nix
     ./home/fzf.nix

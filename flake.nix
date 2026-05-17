@@ -32,7 +32,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      homeConfigurations."swarn" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."odysseus" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home.nix ];
         extraSpecialArgs = { inherit inputs; };
