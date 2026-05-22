@@ -31,6 +31,19 @@
 
     stateVersion = "25.11";
 
+
+
+    sessionVariables = {
+      EDITOR = "nvim";
+      BROWSER = "helium-browser";
+      TERMINAL = "ghostty";
+      TERM = "xterm-256color";
+
+      ANDROID_SDK = "/opt/android-sdk";
+
+      ZDOTDIR = "${config.home.homeDirectory}/.config/zsh";
+    };
+
     sessionPath = [
       "${config.home.homeDirectory}/.local/bin"
       "${config.home.homeDirectory}/.local/bin/statusbar"
@@ -38,15 +51,8 @@
       "${config.home.homeDirectory}/.local/share/go/bin"
       "${config.home.homeDirectory}/Applications"
       "${config.home.homeDirectory}/opt/jai/bin"
+      "/opt/android-sdk/platform-tools"
     ];
-
-    sessionVariables = {
-      EDITOR = "nvim";
-      BROWSER = "helium-browser";
-      TERMINAL = "ghostty";
-
-      ZDOTDIR = "${config.home.homeDirectory}/.config/zsh";
-    };
 
     packages = with pkgs; [
       zinit

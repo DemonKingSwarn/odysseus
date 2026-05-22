@@ -61,11 +61,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1779189439,
-        "narHash": "sha256-hY6YABLOp/t8UKq9tTfs0venKRv4Rj5sXour+g+TG3M=",
+        "lastModified": 1779432594,
+        "narHash": "sha256-oe1slNKsU86oulGpBpoVPzc6cCEFZ3sqRPAg9XP1sL4=",
         "owner": "DemonKingSwarn",
         "repo": "luffy",
-        "rev": "607b26d2a53ad7edbb280dde322e00c432356e42",
+        "rev": "6700b8fe7767f07a93ec6878ce2a2f82b094e82c",
         "type": "github"
       },
       "original": {

@@ -113,6 +113,7 @@
 
       export GOPATH="$XDG_DATA_HOME"/go
       export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+      export TERM="xterm-256color"
 
       # global aliases
       alias -g NE='2>/dev/null'
