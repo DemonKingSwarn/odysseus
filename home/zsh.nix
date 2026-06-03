@@ -201,6 +201,11 @@
           bat "$1"
         fi
       }
+
+      function gen_string() {
+        head /dev/urandom | tr -cd "''${2:-[:alnum:]}" | cut -c-''${1:-12}
+      }
+
       function mkcd() {
         mkdir -p "$1"
         cd "$1"
