@@ -105,6 +105,8 @@
       uninstall = "paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rcns";
       update = "paru -Syu --noconfirm";
       garbage = "paru -Rcns $(paru -Qqdtt)";
+
+      hm = "home-manager switch --flake .#odysseus";
     };
 
     initContent = ''
@@ -113,6 +115,7 @@
 
       export GOPATH="$XDG_DATA_HOME"/go
       export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+      export WINEPREFIX="$HOME/.local/share/wine"
       export TERM="xterm-256color"
 
       # global aliases

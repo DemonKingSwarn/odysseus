@@ -1,24 +1,22 @@
 { lib, ... }:
 
 {
-
-
   programs.fzf = {
     enable = true;
     colors = lib.mkForce {
-      bg       = "#1e1e2e";
-      "bg+"    = "#313244";
-      fg       = "#cdd6f4";
-      "fg+"    = "#cdd6f4";
-      hl       = "#f38ba8";
-      "hl+"    = "#f38ba8";
-      header   = "#f38ba8";
-      info     = "#cba6f7";
-      marker   = "#b4befe";
-      pointer  = "#f5e0dc";
-      prompt   = "#cba6f7";
-      spinner  = "#f5e0dc";
-      selected-bg = "#45475a";
+      bg       = "#2E3440";
+      "bg+"    = "#3B4252";
+      fg       = "#D8DEE9";
+      "fg+"    = "#ECEFF4";
+      hl       = "#BF616A";
+      "hl+"    = "#BF616A";
+      header   = "#BF616A";
+      info     = "#B48EAD";
+      marker   = "#88C0D0";
+      pointer  = "#E5E9F0";
+      prompt   = "#B48EAD";
+      spinner  = "#E5E9F0";
+      selected-bg = "#434C5E";
     };
 
     defaultOptions = [

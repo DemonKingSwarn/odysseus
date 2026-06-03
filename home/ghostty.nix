@@ -5,7 +5,7 @@
     enable = true;
 
     settings = {
-      theme = "Catppuccin Mocha";
+      theme = "Nord";
       #background = "#282a36";
       background-opacity = 0.90;
 
