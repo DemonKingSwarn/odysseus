@@ -6,6 +6,7 @@
 
     settings = {
       theme = "Nord";
+      #config-file = "/home/swarn/.cache/wal/ghostty.conf";
       #background = "#282a36";
       background-opacity = 0.90;
 
