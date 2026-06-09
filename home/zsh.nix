@@ -101,6 +101,8 @@
       pbcopy = "wl-copy";
       pbpaste = "wl-paste";
 
+      hs = "podman exec headscale headscale";
+
       install = "paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S";
       uninstall = "paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rcns";
       update = "paru -Syu --noconfirm";

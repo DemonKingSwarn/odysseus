@@ -2,20 +2,7 @@
 
 {
   imports = [
-    ./home/nix.nix
-    ./home/git.nix
-    ./home/bat.nix
-    ./home/eza.nix
-    ./home/fzf.nix
-    ./home/zsh.nix
-    ./home/gpg.nix
-    ./home/tmux.nix
-    ./home/starship.nix
-    ./home/ghostty.nix
-    ./home/wezterm.nix
-    ./home/mime-apps.nix
-    ./home/xdg-user-dirs.nix
-    ./home/editorconfig.nix
+
   ];
 
   targets.genericLinux.enable = true;
@@ -41,7 +28,7 @@
 
       ANDROID_SDK = "/opt/android-sdk";
 
-      ZDOTDIR = "${config.home.homeDirectory}/.config/zsh";
+      #ZDOTDIR = "${config.home.homeDirectory}/.config/zsh";
     };
 
     sessionPath = [
@@ -55,16 +42,6 @@
     ];
 
     packages = with pkgs; [
-      zinit
-      duf
-      zoxide
-      rm-improved
-      ripgrep
-      yazi
-      aria2
-      figlet
-      lazygit
-      atuin
       inputs.hypr-wellbeing.packages.${pkgs.system}.default
       inputs.luffy.packages.${system}.luffy
     ];
